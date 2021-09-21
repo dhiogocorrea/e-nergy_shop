@@ -1,0 +1,38 @@
+{
+  "SP": [
+    {
+      "Name": "São Paulo",
+      "Value": "São Paulo",
+      "LightCompany": "Eletropaulo",
+      "TaxResidential": 0.58,
+      "TaxEnterprise": 0.53,
+      "Id": 1
+    },
+    {
+      "Name": "São Carlos",
+      "Value": "São Carlos",
+      "LightCompany": "CPFL Paulista",
+      "TaxResidential": 0.87,
+      "TaxEnterprise": 0.79,
+      "Id": 2
+    }
+  ],
+  "RJ": [
+    {
+      "Name": "Rio de Janeiro",
+      "Value": "Rio de Janeiro",
+      "LightCompany": "Light",
+      "TaxResidential": 1.09,
+      "TaxEnterprise": 1.08,
+      "Id": 1
+    },
+    {
+      "Name": "Niteroi",
+      "Value": "Niteroi",
+      "LightCompany": "Light",
+      "TaxResidential": 1.09,
+      "TaxEnterprise": 1.08,
+      "Id": 2
+    }
+  ]
+}

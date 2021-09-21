@@ -1,0 +1,74 @@
+[
+  {
+    "id": 970,
+    "state": "SP",
+    "city": "São Paulo",
+    "potencia kwp": 4.5,
+    "nro_paineis": 12,
+    "geracao_media": 531,
+    "preco": "R$21.914,25"
+  },
+  {
+    "id": 1015,
+    "state": "SP",
+    "city": "São Paulo",
+    "potencia kwp": 4.5,
+    "nro_paineis": 12,
+    "geracao_media": 531,
+    "preco": "R$22.028,31"
+  },
+  {
+    "id": 1054,
+    "state": "SP",
+    "city": "São Paulo",
+    "potencia kwp": 4.5,
+    "nro_paineis": 12,
+    "geracao_media": 531,
+    "preco": "R$22.382,54"
+  },
+  {
+    "id": 1112,
+    "state": "SP",
+    "city": "São Paulo",
+    "potencia kwp": 4.5,
+    "nro_paineis": 12,
+    "geracao_media": 531,
+    "preco": "R$22.906,40"
+  },
+  {
+    "id": 1114,
+    "state": "SP",
+    "city": "São Paulo",
+    "potencia kwp": 4.5,
+    "nro_paineis": 10,
+    "geracao_media": 531,
+    "preco": "R$22.609,57"
+  },
+  {
+    "id": 1346,
+    "state": "SP",
+    "city": "São Paulo",
+    "potencia kwp": 4.5,
+    "nro_paineis": 10,
+    "geracao_media": 531,
+    "preco": "R$25.088,26"
+  },
+  {
+    "id": 1381,
+    "state": "SP",
+    "city": "São Paulo",
+    "potencia kwp": 4.5,
+    "nro_paineis": 10,
+    "geracao_media": 531,
+    "preco": "R$25.121,55"
+  },
+  {
+    "id": 1455,
+    "state": "SP",
+    "city": "São Paulo",
+    "potencia kwp": 4.5,
+    "nro_paineis": 10,
+    "geracao_media": 531,
+    "preco": "R$25.681,17"
+  }
+]
