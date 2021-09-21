@@ -18,16 +18,16 @@ const {actions, reducer} = suppliersSlice;
 export const {setAvailableSuppliers} = actions;
 
 export const suppliersList = (state, city, kwp) => dispatch => {
-  const fakeData = require('./fakedata.json');
-  dispatch(setAvailableSuppliers(fakeData));
+  //const fakeData = require('./fakedata.json');
+  //dispatch(setAvailableSuppliers(fakeData));
 
-  // get(state, city, kwp)
-  //   .then(response => {
-  //     dispatch(setAvailableSuppliers(response.data));
-  //   })
-  //   .catch(error => {
-  //     console.log(error);
-  //   });
+  get(state, city, kwp)
+    .then(response => {
+      dispatch(setAvailableSuppliers(response.data));
+    })
+    .catch(error => {
+      console.log(error);
+    });
 };
 
 export default reducer;
