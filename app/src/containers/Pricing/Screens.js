@@ -93,6 +93,7 @@ const BillInformation = props => {
       <StyledTextInput
         value={props.monthlyBill}
         onChangeText={value => props.setMonthlyBill(value)}
+        keyboardType="numeric"
         maskType="currency"
         label="Gasto mensal..."
       />

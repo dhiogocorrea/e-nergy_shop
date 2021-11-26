@@ -1,11 +1,12 @@
 import React, {useState, useEffect, useRef} from 'react';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {Row} from 'react-native-easy-grid';
 import Wizard from 'react-native-wizard';
 import {Container, FullView, PrimaryButton, StyledDividerHorizontal, StyledText} from '../../core/styles';
 import {Welcome, UserInformation, BillInformation, FinalResult} from './Screens';
 import {useNavigation} from '@react-navigation/core';
 import {calculateKwh, calculateKwp} from '../../core/utils/energy';
+import {ActivityIndicator} from 'react-native-paper';
 
 import {suppliersList} from '../../core/store/suppliersSlice';
 
@@ -27,6 +28,10 @@ const Pricing = () => {
   const availableCities = require('./cities.json');
 
   const dispatch = useDispatch();
+
+  const suppliersData = useSelector(({suppliers}) => suppliers.availableSuppliers);
+  const [loading, setLoading] = useState(false);
+  const [processing, setProcessing] = useState(false);
 
   const stepList = [
     {
@@ -60,12 +65,28 @@ const Pricing = () => {
   ];
 
   const finish = () => {
-    // AsyncStorage.setItem('budget', {state: state, city: city, kwp: result.kwp}).then(() => {
-
-    // });
-    dispatch(suppliersList(state, city, result.kwp));
-    navigation.navigate('Home');
+    setProcessing(true);
   };
+
+  useEffect(
+    () => {
+      if (processing === true) {
+        dispatch(suppliersList(state, city, result.kwp));
+        setLoading(true);
+      }
+    },
+    [processing],
+  );
+
+  useEffect(
+    () => {
+      if (suppliersData !== undefined && processing === true) {
+        setLoading(false);
+        navigation.navigate('Home');
+      }
+    },
+    [suppliersData],
+  );
 
   useEffect(
     () => {
@@ -114,6 +135,12 @@ const Pricing = () => {
           </PrimaryButton>
         </Container>
       </Row>
+      <ActivityIndicator
+        style={{position: 'absolute', width: 200, height: 200}}
+        color="red"
+        size="large"
+        animating={loading}
+      />
     </Container>
   );
 };
